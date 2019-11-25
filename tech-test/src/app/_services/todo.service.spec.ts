@@ -68,7 +68,7 @@ describe('TodoService', () => {
       expect(item).toEqual(dummyTask);
     });
 
-    const request = httpMock.expectOne(`${environment.apiUrl}/1`);
+    const request = httpMock.expectOne(`${environment.apiUrl}/tasks/1`);
     expect(request.request.method).toBe('GET');
     request.flush(dummyTask);
   });
