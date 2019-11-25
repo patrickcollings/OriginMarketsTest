@@ -1,43 +1,11 @@
 {
   "tasks": [
     {
-      "id": 1,
-      "label": "Kitchen Cleanup",
-      "description": "Clean my dirty kitchen",
-      "category": "house",
-      "done": false
-    },
-    {
-      "id": 2,
-      "label": "Taxes",
-      "description": "Start doing my taxes and contact my accountant jhon for advice",
-      "category": "bureaucracy",
-      "done": "22-10-2019"
-    },
-    {
-      "label": "2",
-      "description": "descrption",
-      "category": "4",
-      "id": 3
-    },
-    {
-      "label": "5",
-      "description": "q",
-      "category": "6`",
-      "id": 4
-    },
-    {
-      "label": "5",
-      "description": "q",
-      "category": "6`",
-      "id": 5
-    },
-    {
       "label": "1",
-      "description": "1",
+      "description": "177",
       "category": "1",
-      "done": false,
-      "id": 6
+      "done": "Mon Nov 25 2019 12:00:32 GMT+0000 (Greenwich Mean Time)",
+      "id": 1
     }
   ]
 }

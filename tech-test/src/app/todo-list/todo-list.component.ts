@@ -10,7 +10,7 @@ import { TodoItem } from '../_models/todoItem';
 })
 export class TodoListComponent implements OnInit {
 
-  columnsToDisplay: string[] = ['label', 'category', 'done'];
+  columnsToDisplay: string[] = ['label', 'category', 'done', 'delete'];
 
   dataSource;
   items: TodoItem[];
@@ -38,6 +38,32 @@ export class TodoListComponent implements OnInit {
       this.items.push(item);
       // Update data source
       this.createDataSource(this.items); 
+    })
+  }
+
+  deleteItem(item: TodoItem) {
+    this.todoService.deleteItem(item.id).subscribe(res => {
+      // Remove item from list
+      this.items = this.items.filter(i => i.id !== item.id);
+      this.createDataSource(this.items);
+    })
+  }
+
+  checked(item: TodoItem) {
+    item.done = new Date().toString();
+    console.log(item);
+    this.updateItem(item);
+  }
+
+  unchecked(item: TodoItem) {
+    // Set done to false
+    item.done = false;
+    this.updateItem(item);
+  }
+
+  updateItem(item: TodoItem) {
+    this.todoService.updateItem(item).subscribe(item => {
+      console.log('Updated item');
     })
   }
 

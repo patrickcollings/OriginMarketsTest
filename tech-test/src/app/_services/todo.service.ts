@@ -25,11 +25,11 @@ export class TodoService {
   }
 
   updateItem(todoItem: TodoItem) {
-    return this.http.put(`${environment.apiUrl}`, todoItem);
+    return this.http.patch(`${environment.apiUrl}/tasks/${todoItem.id}`, todoItem);
   }
 
   deleteItem(id: number) {
-    return this.http.delete(`${environment.apiUrl}/${id}`);
+    return this.http.delete<TodoItem>(`${environment.apiUrl}/tasks/${id}`);
   }
 
 
