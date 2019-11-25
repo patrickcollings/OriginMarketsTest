@@ -17,7 +17,7 @@ export class TodoService {
   }
 
   getItem(id: number) {
-    return this.http.get<TodoItem>(`${environment.apiUrl}/${id}`);
+    return this.http.get<TodoItem>(`${environment.apiUrl}/tasks/${id}`);
   }
 
   createItem(todoItem: TodoItem) {

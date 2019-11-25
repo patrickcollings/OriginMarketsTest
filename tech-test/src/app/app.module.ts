@@ -19,12 +19,14 @@ import { TodoFormComponent } from './todo-form/todo-form.component';
 // Services
 import { TodoService } from './_services/todo.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TodoItemComponent } from './todo-item/todo-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoListComponent,
-    TodoFormComponent
+    TodoFormComponent,
+    TodoItemComponent
   ],
   imports: [
     BrowserModule,

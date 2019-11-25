@@ -10,7 +10,7 @@ import { TodoItem } from '../_models/todoItem';
 })
 export class TodoListComponent implements OnInit {
 
-  columnsToDisplay: string[] = ['label', 'category', 'done', 'delete'];
+  columnsToDisplay: string[] = ['label', 'category', 'done', 'options'];
 
   dataSource;
   items: TodoItem[];
@@ -50,7 +50,7 @@ export class TodoListComponent implements OnInit {
   }
 
   checked(item: TodoItem) {
-    item.done = new Date().toString();
+    item.done = new Date().toLocaleDateString();
     console.log(item);
     this.updateItem(item);
   }
