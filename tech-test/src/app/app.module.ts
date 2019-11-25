@@ -10,7 +10,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 
 import { TodoListComponent } from './todo-list/todo-list.component';
-
+import { TodoFormComponent } from './todo-form/todo-form.component';
 
 // Services
 import { TodoService } from './_services/todo.service';
@@ -19,7 +19,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
-    TodoListComponent
+    TodoListComponent,
+    TodoFormComponent
   ],
   imports: [
     BrowserModule,
