@@ -1,4 +1,4 @@
-<form [formGroup]="todoForm" class="form">
+<form [formGroup]="todoForm" class="form" (ngSubmit)="onSubmit()">
     <mat-form-field class="w-100">
         <input matInput placeholder="Label" type="text" formControlName="label" />
     </mat-form-field>

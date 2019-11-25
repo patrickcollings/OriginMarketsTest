@@ -11,6 +11,7 @@ import { map } from 'rxjs/operators';
 import { of } from 'rxjs';
 import { MatInputModule } from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 const MOCK_ITEMS = [
   {
@@ -58,7 +59,8 @@ describe('TodoListComponent', () => {
       // provide the component-under-test and dependent service
       imports: [MatFormFieldModule, MatTableModule, MatInputModule, BrowserAnimationsModule],
       providers: [{ provide: TodoService, useClass: MockTodoService }],
-      declarations: [TodoListComponent]
+      declarations: [TodoListComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     }).compileComponents();
   }));
 

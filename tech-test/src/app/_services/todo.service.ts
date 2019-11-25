@@ -21,7 +21,7 @@ export class TodoService {
   }
 
   createItem(todoItem: TodoItem) {
-    return this.http.post(`${environment.apiUrl}`, todoItem);
+    return this.http.post<TodoItem>(`${environment.apiUrl}/tasks`, todoItem);
   }
 
   updateItem(todoItem: TodoItem) {
