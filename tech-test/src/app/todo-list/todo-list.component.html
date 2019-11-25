@@ -1,12 +1,16 @@
-<mat-form-field>
-    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
-</mat-form-field>
+<h1 class="title">My TODO List</h1>
+
+<div class="filter-container">
+    <mat-form-field class="filter">
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+    </mat-form-field>
+</div>
 
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
     <!-- Position Column -->
     <ng-container matColumnDef="label">
-        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <th mat-header-cell *matHeaderCellDef> Label </th>
         <td mat-cell *matCellDef="let item"> {{ item.label }} </td>
     </ng-container>
 
@@ -34,8 +38,8 @@
     <ng-container matColumnDef="options">
         <th mat-header-cell *matHeaderCellDef></th>
         <td mat-cell *matCellDef="let item">
-            <mat-icon (click)="deleteItem(item)">delete_forever</mat-icon>
-            <mat-icon [routerLink]="['/item/', item.id]">edit</mat-icon>
+            <mat-icon class="options-icon" (click)="deleteItem(item)">delete_forever</mat-icon>
+            <mat-icon class="options-icon" [routerLink]="['/item/', item.id]">edit</mat-icon>
         </td>
     </ng-container>
 
@@ -43,4 +47,6 @@
     <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
 </table>
 
-<app-todo-form (formResult)="addItem($event)"></app-todo-form>
+<div class="form-container">
+    <app-todo-form (formResult)="addItem($event)"></app-todo-form>
+</div>

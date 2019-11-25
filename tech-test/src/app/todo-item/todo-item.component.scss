@@ -1,0 +1,18 @@
+.form-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.return-button {
+    margin-bottom: 1em;
+    cursor: pointer;
+}

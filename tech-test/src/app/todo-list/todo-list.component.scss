@@ -1,3 +1,33 @@
 table {
     width: 100%;
   }
+
+  .title {
+    width: 100%;
+    text-align: center;
+  }
+
+  .filter-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .filter {
+    width: 50%;
+  }
+
+  .form-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 2em;
+  }
+
+  app-todo-form {
+    width: 40%;
+  }
+
+  .options-icon {
+    cursor: pointer;
+  }
